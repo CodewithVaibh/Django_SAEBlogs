@@ -1,0 +1,20 @@
+{% extends "base.html" %} {% block title %} Login Site {% endblock title %} {% block body %}
+<h1> Login </h1>
+
+<form action="/handlelogin/" method="post"> {% csrf_token %}
+    <div class="mb-3">
+        <label for="usernameLogin" class="navInputLabel"><i class="fas fa-user"></i></label>
+        <input type="text" class="navInput" id="usernameLogin" name="username" placeholder="Username" required>
+    </div>
+
+    <div class="mb-3">
+        <label for="password1Login" class="navInputLabel"><i class="fas fa-lock"></i></label>
+        <input type="password" class="navInput" id="password1Login" name="password1" placeholder="Password" required>
+    </div>
+
+    <div>
+        <button type="submit" class="btn btn-success">Log In</button>
+    </div>
+</form>
+
+{% endblock body %}

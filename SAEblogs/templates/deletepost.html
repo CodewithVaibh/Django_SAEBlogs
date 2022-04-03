@@ -1,0 +1,14 @@
+{% extends "base.html" %} {% block tittle %} Delete Post Page {% endblock %} {% block body %}
+
+<h2>Delete Selected Post </h2>
+<br>
+<h4><a href="{% url 'postview' post.pk %}"> View Post</a></h4>
+<form method="POST">
+    {% csrf_token %}
+    <br>
+    <br>
+    <br>
+    <strong>Are you sure you want to delete this post??</strong>
+    <br>
+    <br>
+    <button class="btn btn-secondary">Delete</button> {% endblock %}

@@ -1,0 +1,8 @@
+{% extends "base.html" %} {% block tittle %} Add Post Page {% endblock %} {% block body %}{% if user.is_authenticated %}
+<h1>Add Blog Post</h1>
+
+<form method="POST">
+    {% csrf_token %} {{form.as_p}}
+    <button class="btn btn-secondary">Post</button> {% else %}
+    <h1> Please Log in</h1>
+    {% endif %} {% endblock body %}

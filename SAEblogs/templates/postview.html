@@ -1,0 +1,11 @@
+{% extends "base.html" %} {% block title %} View Post Page {% endblock %} {% block body %}
+<h1>
+    {{post.title}}</h1>
+<p> -----By {{post.author}}</p>
+<p>(Posted on {{post.post_date}})</p>
+<hr>
+<br> {{post.body}}
+<br>
+<br>
+<br>
+<a href="{% url 'home' %}" class="btn btn-secondary">Back</a> {% endblock %}
