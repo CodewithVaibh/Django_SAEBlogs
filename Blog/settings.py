@@ -1,4 +1,5 @@
 from pathlib import Path
+import django_heroku
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -37,6 +38,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware'
 ]
 
 ROOT_URLCONF = 'Blog.urls'
